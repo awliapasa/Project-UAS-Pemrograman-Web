@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Manajemen Data TPMD</title>
+
+        <link rel="stylesheet" href="css/inputRekamMedis.css" />
+
+        <!--Google Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        
+        <!--Font awesome 5.15.4-->
+        <link 
+            rel="stylesheet" 
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 
+            integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" 
+            crossorigin="anonymous" 
+            referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <header class="navbar-container">
+            <div class="logo">
+                <img src="img/logo.png" alt="Tempat Praktik Mandiri Dokter">
+            </div>
+            <nav class="nav-list">
+                <ul>
+                    <li><a href="index_beranda.html">Beranda</a></li>
+                    <li><a href="index_pasien.html">Pasien</a></li>
+                    <li><a href="index_RekamMedis.php">Rekam Medis</a></li>
+                    <li><a href="index_kunjungan.php">Data Kunjungan</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div id="content">
+                <article id="Rekam Medis">
+                    <h2>Rekam Medis</h2>
+                    <button class="input">
+                        <a href="index_RekamMedis.php">List Data</a>
+                    </button>
+                    <section class="tempat-input">
+                        <form action="inputRM.php" id="rekamMedisForm" method="POST" class="data">
+                            <label for="id_pasien">ID Pasien:</label>
+                            <input type="text" id="id_pasien" name="id_pasien" placeholder="Masukkan ID Pasien" required>
+
+                            <label for="nama_pasien">Nama Pasien:</label>
+                            <input type="text" id="nama_pasien" name="nama_pasien" placeholder="Masukkan nama lengkap pasien" required>
+
+                            <label for="tanggal">Tanggal:</label>
+                            <input type="text" id="tanggal" name="tanggal" placeholder="Masukkan tanggal (yyyy-mm-dd)" required>
+
+                            <label for="gejala">Gejala:</label>
+                            <input type="text" id="gejala" name="gejala" placeholder="Masukkan gejala pasien" required>
+
+                            <label for="diagnosa">Diagnosa:</label>
+                            <input type="text" id="diagnosa" name="diagnosa" placeholder="Masukkan diagnosa pasien" required>
+
+                            <label for="tindakan">Tindakan:</label>
+                            <input type="text" id="tindakan" name="tindakan" placeholder="Masukkan tindakan yang telah dilakukan" required>
+                            <button type="submit" class="submit"> Submit Data </button>
+                                <!-- <a href="index_RekamMedis.php">Submit Data</a> -->
+                            
+                        </form>
+                    </section>
+                </article>
+            </div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,249 @@
+*,
+*::before
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+
+    height: 100vh;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+header.navbar-container {
+    width: 100%;
+    max-width: 1200px;
+    padding-block: 1rem;
+    margin-inline: auto;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    z-index: 9999;
+}
+
+header.navbar-container .logo img {
+    width: 250px;
+}
+
+header.navbar-container .nav-list ul {
+    padding-left: 0;
+
+    display: flex;
+    justify-content: center;
+    gap: 2rem 1rem;
+}
+
+header.navbar-container .nav-list li {
+    list-style-type: none;
+}
+
+header.navbar-container .nav-list li a {
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: black;
+
+    transition: all 0.2s ease-in-out;
+}
+
+header.navbar-container .nav-list li:hover a {
+    background-color: #779eb2;
+    color: white;
+}
+
+main {
+    display: flex;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding: 1rem;
+}
+
+main #content {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.card, .card2 {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+
+    padding: 20px;
+}
+
+.card2 img {
+    width: 150px;
+    height: 150px;
+}
+
+.card2 th, .card2 td {
+    padding: 10px 40px;
+}
+
+
+.reset {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.reset-button {
+    background-color: #e74c4c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.reset-button:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+.reset-button:active {
+    background-color: #a93226;
+    transform: scale(0.95);
+}
+
+@media screen and (max-width: 1200px) {
+    main {
+        flex-flow: column nowrap;
+
+        main aside {
+            align-self: center;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header.navbar-container {
+        flex-direction: column;
+    }
+
+    header.navbar-container .nav-list ul {
+        flex-wrap: wrap;
+        column-gap: 0.5rem;
+    }
+
+    main {
+        padding: 1rem 3rem;
+        flex-direction: column;
+    }
+
+    main .content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    main aside {
+        align-self: stretch;
+    }
+}
+
+body {
+    background-color: white;
+}
+
+main.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family:'Quicksand', sans-serif;
+    border-spacing: 0;
+    
+}
+
+
+th {
+    background-color: #c4c4e0;
+    color:black;
+    text-align: center;
+    padding: 10px;
+    font-weight: 600;
+    border: 1px solid black;
+    background-color: rgb(196, 196, 224);
+}
+
+td {
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 18px;
+}
+
+td, th {
+    font-size: 18px;
+    text-align: left;
+}
+
+@media (max-width: 600px) {
+    table {
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        overflow-x: auto;
+    }
+    th, td {
+        padding: 8px;
+    }
+}
+
+.search-section {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.search-form { 
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-input {
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-button {
+    padding: 8px 12px;
+    background-color: #779eb2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #5a7d99;
+}
+
+#content {
+    overflow-x: auto;
+}
+
